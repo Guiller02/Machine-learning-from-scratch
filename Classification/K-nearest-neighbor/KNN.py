@@ -25,10 +25,9 @@ def k_nearest_neighbors(data,predict,k=3):
     #print(vote_result,confidence)
     return vote_result,confidence
 
-
 accuracies = []
 for i in range(25):
-    df = pd.read_csv("Classification/K-nearest-neighbor/breast-cancer-wisconsin.data")
+    df = pd.read_csv("breast-cancer-wisconsin.data")
     df.replace('?', -999999, inplace=True)
     df.drop(['id'], 1, inplace=True)
     full_data = df.astype(float).values.tolist()
